@@ -1,0 +1,32 @@
+# Ignore environment files
+.env
+
+# Ignore database files (if SQLite or other DB files are used locally)
+*.db
+
+# Ignore MySQL credentials or config files
+*.cnf
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore Docker-related temporary files
+docker-compose.override.yml
+*.pid
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code-specific files
+.vscode/
+.history/
+
+# Ignore node_modules (if Node.js is also involved)
+node_modules/
+
+# Ignore compiled binaries or caches
+*.out
+*.class
+*.swp

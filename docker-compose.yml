@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    build: .
+    container_name: sql-docker-play-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: SampleDB
+      MYSQL_USER: vasu
+      MYSQL_PASSWORD: vasupassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./data.sql:/docker-entrypoint-initdb.d/data.sql
